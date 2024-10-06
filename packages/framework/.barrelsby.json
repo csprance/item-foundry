@@ -1,0 +1,6 @@
+{
+  "directory": ["./src"],
+  "exclude": ["__mock__", "__mocks__", ".spec.ts"],
+  "delete": true,
+  "singleQuotes": true
+}

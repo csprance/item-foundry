@@ -1,0 +1,49 @@
+{
+  "name": "@qtg/item-foundry-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "source": "./src/index.ts",
+  "module": "./dist/index.js",
+  "main": "dist/index.cjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "turbo build",
+    "clean": "turbo clean",
+    "dev": "turbo dev",
+    "prettier": "turbo prettier",
+    "lint": "turbo lint"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.7.26",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/node": "^22.7.4",
+    "barrelsby": "^2.8.1",
+    "concurrently": "^9.0.1",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "prettier": "latest",
+    "reflect-metadata": "^0.2.2",
+    "rimraf": "^5.0.7",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsup": "^8.2.4",
+    "turbo": "^2.1.3",
+    "typescript": "^5.5.4",
+    "vitest": "^2.1.1"
+  },
+  "dependencies": {},
+  "packageManager": "yarn@1.22.22",
+  "workspaces": [
+    "packages/*"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "directory": [
+    "./src/basetypes",
+    "./src/enums",
+    "./src/properties",
+    "./src/items"
+  ],
+  "exclude": ["__mock__", "__mocks__", ".spec.ts", "tests/*"],
+  "delete": true,
+  "singleQuotes": true
+}
