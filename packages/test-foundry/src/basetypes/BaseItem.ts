@@ -3,7 +3,7 @@ import { Item, Property } from '@qtg/item-foundry';
 import { ItemCategory, Quality, Rarity } from '../enums';
 import {
   FileProperty,
-  FloatProperty,
+  FloatProperty, IntProperty,
   LocalizedText,
   LocalizedTextProperty,
 } from '../properties';
@@ -31,4 +31,7 @@ export abstract class BaseItem extends Item {
 
   @FileProperty({metadata: {uiHint: 'Where are the visuals for this item located at'}})
   abstract visuals: string;
+
+  @IntProperty({metadata: {uiHint: ""}})
+  abstract stackSize: number;
 }

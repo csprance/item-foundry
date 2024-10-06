@@ -16,6 +16,7 @@
     }
   },
   "scripts": {
+    "export": "",
     "build": "turbo build",
     "clean": "turbo clean",
     "dev": "turbo dev",

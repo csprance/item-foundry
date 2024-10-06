@@ -12,4 +12,5 @@ export class CrumpledPaper extends BaseItem {
   category = ItemCategory.Consumable;
   quality = Quality.Poor;
   visuals = '/art/item_visuals.fbx'
+  stackSize = 1;
 }
