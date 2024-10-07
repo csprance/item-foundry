@@ -14,7 +14,16 @@
     "outDir": "./dist", // Output directory for compiled files
     "rootDir": "./src", // Root directory for input files
     "resolveJsonModule": true, // Enable importing of .json files
-    "sourceMap": true // Generate source maps for debugging
+    "sourceMap": true,
+    // Generate source maps for debugging
+    "paths": {
+      "~": [
+        "./src"
+      ],
+      "~/*": [
+        "./src/*"
+      ]
+    }
   },
   "include": [
     "src/**/*" // Include all source files in src directory

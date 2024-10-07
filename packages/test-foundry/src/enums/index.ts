@@ -5,3 +5,4 @@
 export * from './ItemCategory';
 export * from './Quality';
 export * from './Rarity';
+export * from './Weight';

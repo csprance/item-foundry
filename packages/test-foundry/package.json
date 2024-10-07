@@ -16,7 +16,7 @@
     }
   },
   "scripts": {
-    "export": "node ./dist/index.js",
+    "export": "tsx ./src/index.ts",
     "watch:barrels": "barrelsby --watch --config .barrelsby.json",
     "barrels": "barrelsby --config .barrelsby.json",
     "build": "yarn run barrels && tsup",

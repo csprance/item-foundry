@@ -1,4 +1,4 @@
-import { Property, ValidationRule } from '@qtg/item-foundry';
+import {Property, ValidationRule} from '@qtg/item-foundry';
 
 export function LocalizedTextProperty(
   options: { metadata?: Record<string, any> } = {},
@@ -29,12 +29,20 @@ export class LocalizedText {
     hint,
     category,
   }: {
-    text: string;
+    text?: string;
     category?: string;
     hint?: string;
   }) {
     this.text = text ? text : this.text;
     this.hint = hint ? hint : this.hint;
     this.category = category ? category : this.category;
+  }
+
+  toJSON() {
+    return {
+      text: this.text,
+      hint: this.hint,
+      category: this.category,
+    }
   }
 }

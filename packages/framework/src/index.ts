@@ -4,4 +4,5 @@
 
 export * from './Item';
 export * from './validators';
+export * from './decorators/Hint';
 export * from './decorators/Property';

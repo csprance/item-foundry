@@ -1,37 +1,37 @@
-import { Item, Property } from '@qtg/item-foundry';
-
-import { ItemCategory, Quality, Rarity } from '../enums';
-import {
-  FileProperty,
-  FloatProperty, IntProperty,
-  LocalizedText,
-  LocalizedTextProperty,
-} from '../properties';
+import {Hint, Item, Property} from '@qtg/item-foundry';
+import {ItemCategory, Quality, Rarity, WeightCategory} from '~/enums';
+import {FileProperty, IntProperty, LocalizedText, LocalizedTextProperty, WeightProperty,} from '~/properties';
 
 export abstract class BaseItem extends Item {
-  @LocalizedTextProperty({ metadata: { uiHint: 'The name of the item' } })
+  @LocalizedTextProperty()
+  @Hint('The name of the item')
   abstract name: LocalizedText;
 
-  @LocalizedTextProperty({
-    metadata: { uiHint: 'The description of the item' },
-  })
+  @LocalizedTextProperty()
+  @Hint('The description of the item')
   abstract description: LocalizedText;
 
-  @FloatProperty({ metadata: { uiHint: 'How much something weighs' } })
-  abstract weight: number;
+  @WeightProperty()
+  @Hint('How much something weighs')
+  weight: WeightCategory | number = WeightCategory.Weightless;
 
-  @Property({ metadata: { uiHint: 'How rare the item is' } })
-  abstract rarity: Rarity;
+  @Property()
+  @Hint('How rare the item is')
+  rarity: Rarity = Rarity.Common;
 
-  @Property({ metadata: { uiHint: 'What Item category does this belong to' } })
-  abstract category: ItemCategory;
+  @Property()
+  @Hint('What Item category does this belong to')
+  category: ItemCategory = ItemCategory.Consumable;
 
-  @Property({ metadata: { uiHint: 'What Item category does this belong to' } })
-  abstract quality: Quality;
+  @Property()
+  @Hint('What Item category does this belong to')
+  quality: Quality = Quality.Standard;
 
-  @FileProperty({metadata: {uiHint: 'Where are the visuals for this item located at'}})
-  abstract visuals: string;
+  @FileProperty()
+  @Hint('Where are the visuals for this item located at')
+  visuals: string = '/empty.fbx';
 
-  @IntProperty({metadata: {uiHint: ""}})
-  abstract stackSize: number;
+  @IntProperty()
+  @Hint('How many of these can you stack in one slot')
+  stackSize: number = 1;
 }

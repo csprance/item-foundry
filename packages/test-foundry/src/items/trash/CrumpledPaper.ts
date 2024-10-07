@@ -1,6 +1,6 @@
-import { BaseItem } from '../basetypes';
-import { ItemCategory, Quality, Rarity } from '../enums';
-import { LocalizedText } from '../properties';
+import {BaseItem} from '~/basetypes';
+import {ItemCategory, Quality, Rarity} from '~/enums';
+import {LocalizedText} from '~/properties';
 
 export class CrumpledPaper extends BaseItem {
   name = new LocalizedText({ text: 'Crumpled Paper' });
@@ -11,6 +11,6 @@ export class CrumpledPaper extends BaseItem {
   rarity = Rarity.Trash;
   category = ItemCategory.Consumable;
   quality = Quality.Poor;
-  visuals = '/art/item_visuals.fbx'
+  visuals = '/art/item_visuals.fbx';
   stackSize = 1;
 }

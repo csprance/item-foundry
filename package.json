@@ -16,7 +16,7 @@
     }
   },
   "scripts": {
-    "export": "",
+    "export": "cd packages/test-foundry && yarn run export",
     "build": "turbo build",
     "clean": "turbo clean",
     "dev": "turbo dev",
@@ -37,6 +37,7 @@
     "rimraf": "^5.0.7",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
+    "tsx": "^4.19.1",
     "tsup": "^8.2.4",
     "turbo": "^2.1.3",
     "typescript": "^5.5.4",

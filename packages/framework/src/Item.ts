@@ -1,12 +1,16 @@
-// framework/Item.ts
-import {
-  getPropertyMetadata,
-  getSerializableProperties,
-  getValidationRules,
-} from './decorators/Property';
+import {getPropertyMetadata, getSerializableProperties, getValidationRules,} from './decorators/Property';
 
 export abstract class Item {
   id: string = '';
+
+  constructor() {
+    this.id = this.generateId();
+  }
+
+  protected generateId(): string {
+    const className = this.constructor.name;
+    return toKebabCase(className);
+  }
 
   validate(): string[] {
     const errors: string[] = [];
@@ -27,7 +31,7 @@ export abstract class Item {
   }
 
   toJSON(includeMetadata = false): any {
-    const json: any = {};
+    const json: any = {id: this.id};
     const props = getSerializableProperties(this);
     const metadata = getPropertyMetadata(this);
 
@@ -52,4 +56,12 @@ function serializeValue(value: any): any {
   } else {
     return value;
   }
+}
+
+// Utility function to convert PascalCase to kebab-case
+function toKebabCase(str: string): string {
+  return str
+      .replace(/([a-z0-9])([A-Z])/g, '$1-$2') // Insert hyphen between lowercase and uppercase
+      .replace(/([A-Z])([A-Z][a-z])/g, '$1-$2') // Handle consecutive uppercase letters
+      .toLowerCase();
 }
