@@ -1,6 +1,12 @@
-import {Hint, Item, Property} from '@qtg/item-foundry';
-import {ItemCategory, Quality, Rarity, WeightCategory} from '~/enums';
-import {FileProperty, IntProperty, LocalizedText, LocalizedTextProperty, WeightProperty,} from '~/properties';
+import { Hint, Item, Property } from '@qtg/item-foundry';
+import { ItemCategory, Quality, Rarity, WeightCategory } from '~/enums';
+import {
+  FileProperty,
+  IntProperty,
+  LocalizedText,
+  LocalizedTextProperty,
+  WeightProperty,
+} from '~/properties';
 
 export abstract class BaseItem extends Item {
   @LocalizedTextProperty()

@@ -1,4 +1,4 @@
-import {Property, ValidationRule} from '@qtg/item-foundry';
+import { Property, ValidationRule } from '@qtg/item-foundry';
 
 export function LocalizedTextProperty(
   options: { metadata?: Record<string, any> } = {},

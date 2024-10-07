@@ -17,12 +17,8 @@
     "sourceMap": true,
     // Generate source maps for debugging
     "paths": {
-      "~": [
-        "./src"
-      ],
-      "~/*": [
-        "./src/*"
-      ]
+      "~": ["./src"],
+      "~/*": ["./src/*"]
     }
   },
   "include": [

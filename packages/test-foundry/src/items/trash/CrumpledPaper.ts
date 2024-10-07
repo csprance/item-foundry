@@ -1,6 +1,6 @@
-import {BaseItem} from '~/basetypes';
-import {ItemCategory, Quality, Rarity} from '~/enums';
-import {LocalizedText} from '~/properties';
+import { BaseItem } from '~/basetypes';
+import { ItemCategory, Quality, Rarity } from '~/enums';
+import { LocalizedText } from '~/properties';
 
 export class CrumpledPaper extends BaseItem {
   name = new LocalizedText({ text: 'Crumpled Paper' });
