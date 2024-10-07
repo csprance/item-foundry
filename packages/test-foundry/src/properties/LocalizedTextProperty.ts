@@ -43,6 +43,7 @@ export class LocalizedText {
       text: this.text,
       hint: this.hint,
       category: this.category,
-    }
+      __type: 'LocalizedText',
+    };
   }
 }

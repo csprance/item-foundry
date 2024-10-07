@@ -1,9 +1,9 @@
 // framework/decorators/Property.ts
 import 'reflect-metadata';
 
-const SERIALIZE_KEYS = Symbol('serialize_keys');
-const VALIDATION_RULES = Symbol('validation_rules');
-const PROPERTY_METADATA = Symbol('property_metadata');
+export const SERIALIZE_KEYS = Symbol('serialize_keys');
+export const VALIDATION_RULES = Symbol('validation_rules');
+export const PROPERTY_METADATA = Symbol('property_metadata');
 
 export interface ValidationRule {
   validator: (value: any) => boolean;
