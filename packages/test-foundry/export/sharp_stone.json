@@ -1,0 +1,20 @@
+{
+  "id": "sharp_stone",
+  "name": {
+    "text": "Sharp Stone",
+    "category": "/uncategorized/",
+    "__type": "LocalizedText"
+  },
+  "description": {
+    "text": "A sharpened stone, useful for cutting or crafting.",
+    "category": "/uncategorized/",
+    "__type": "LocalizedText"
+  },
+  "weight": 0.7,
+  "rarity": "uncommon",
+  "category": "consumable",
+  "quality": "standard",
+  "visuals": "/art/sharp_stone_visuals.fbx",
+  "stackSize": 1,
+  "icon": "/empty.png"
+}

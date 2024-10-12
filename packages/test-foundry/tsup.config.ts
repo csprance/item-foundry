@@ -2,7 +2,7 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['src/index.ts'], // specify the entry points
+  entry: ['src/index.ts', 'src/export.ts'], // specify the entry points
   target: 'esnext', // target environment
   format: ['esm', 'cjs'], // output format
   sourcemap: true,

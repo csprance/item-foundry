@@ -1,23 +1,24 @@
 // TODO: Build the JSON Item database here
+import * as fs from 'node:fs';
+import * as path from 'node:path';
+import * as process from 'node:process';
+import { mapItemClasses } from '~/utils';
+
 import * as Items from './items';
 import * as Recipes from './recipes';
 
-const items: any[] = [];
-Object.entries(Items).forEach(([className, ItemClass]) => {
-  console.log(`Item name: ${className}`, ItemClass);
-  const instance = new ItemClass();
-  if (instance.validate().length === 0) {
-    items.push(instance.toJSON());
-  }
-});
-console.log(items);
+export class ItemFoundry {
+  items = mapItemClasses(Items);
+  recipes = mapItemClasses(Recipes);
 
-const recipes: any[] = [];
-Object.entries(Recipes).forEach(([className, ItemClass]) => {
-  console.log(`Recipe name: ${className}`, ItemClass);
-  const instance = new ItemClass();
-  if (instance.validate().length === 0) {
-    recipes.push(instance.toJSON());
+  public export() {
+    for (const item of [this.items, this.recipes].flat()) {
+      const exportPath = path.join(process.cwd(), 'export', `${item.id}.json`);
+      // Write the JSON data to the file
+      const directoryPath = path.dirname(exportPath);
+      fs.mkdirSync(directoryPath, { recursive: true });
+      fs.writeFileSync(exportPath, JSON.stringify(item.toJSON(false), null, 2));
+      console.log(`Exported: ${exportPath}`);
+    }
   }
-});
-console.log(recipes);
+}

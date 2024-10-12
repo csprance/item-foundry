@@ -1,0 +1,20 @@
+{
+  "id": "berries",
+  "name": {
+    "text": "Berries",
+    "category": "/uncategorized/",
+    "__type": "LocalizedText"
+  },
+  "description": {
+    "text": "A handful of wild berries, edible and nutritious.",
+    "category": "/uncategorized/",
+    "__type": "LocalizedText"
+  },
+  "weight": 0.1,
+  "rarity": "common",
+  "category": "consumable",
+  "quality": "standard",
+  "visuals": "/art/berries_visuals.fbx",
+  "stackSize": 20,
+  "icon": "/empty.png"
+}

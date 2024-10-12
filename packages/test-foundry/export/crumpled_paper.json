@@ -1,0 +1,20 @@
+{
+  "id": "crumpled_paper",
+  "name": {
+    "text": "Crumpled Paper",
+    "category": "/uncategorized/",
+    "__type": "LocalizedText"
+  },
+  "description": {
+    "text": "A crumpled piece of paper, someones trash.",
+    "category": "/uncategorized/",
+    "__type": "LocalizedText"
+  },
+  "weight": 0.1,
+  "rarity": "trash",
+  "category": "consumable",
+  "quality": "poor",
+  "visuals": "/art/item_visuals.fbx",
+  "stackSize": 1,
+  "icon": "/empty.png"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "campfire_recipe",
+  "inputs": [
+    {
+      "__type": "Function",
+      "quantity": 5
+    },
+    {
+      "__type": "Function",
+      "quantity": 3
+    },
+    {
+      "__type": "Function",
+      "quantity": 1
+    }
+  ],
+  "outputs": [
+    {
+      "__type": "Function",
+      "quantity": 1
+    }
+  ],
+  "name": {
+    "text": "Campfire Recipe",
+    "category": "/uncategorized/",
+    "__type": "LocalizedText"
+  },
+  "description": {
+    "text": "Combine stones, sticks, and rope to create a campfire.",
+    "category": "/uncategorized/",
+    "__type": "LocalizedText"
+  }
+}

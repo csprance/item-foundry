@@ -13,10 +13,14 @@
     ".": {
       "import": "./dist/index.js",
       "default": "./dist/index.cjs"
+    },
+    "./export": {
+      "import": "./dist/export.js",
+      "default": "./dist/export.cjs"
     }
   },
   "scripts": {
-    "export": "tsx ./src/index.ts",
+    "export": "tsx ./src/export.ts",
     "watch:barrels": "barrelsby --watch --config .barrelsby.json",
     "barrels": "barrelsby --config .barrelsby.json",
     "build": "yarn run barrels && tsup",

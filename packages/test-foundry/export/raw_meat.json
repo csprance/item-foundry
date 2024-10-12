@@ -1,0 +1,20 @@
+{
+  "id": "raw_meat",
+  "name": {
+    "text": "Raw Meat",
+    "category": "/uncategorized/",
+    "__type": "LocalizedText"
+  },
+  "description": {
+    "text": "A piece of uncooked meat, can be cooked or used in recipes.",
+    "category": "/uncategorized/",
+    "__type": "LocalizedText"
+  },
+  "weight": 1,
+  "rarity": "common",
+  "category": "consumable",
+  "quality": "standard",
+  "visuals": "/art/raw_meat_visuals.fbx",
+  "stackSize": 10,
+  "icon": "/empty.png"
+}
