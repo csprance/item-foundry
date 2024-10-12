@@ -16,7 +16,7 @@
     }
   },
   "scripts": {
-    "export": "cd packages/test-foundry && yarn run export",
+    "export": "turbo build && cd packages/test-foundry && yarn run export",
     "build": "turbo build",
     "clean": "turbo clean",
     "dev": "turbo dev",

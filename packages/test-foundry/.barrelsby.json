@@ -3,7 +3,8 @@
     "./src/basetypes",
     "./src/enums",
     "./src/properties",
-    "./src/items"
+    "./src/items",
+    "./src/recipes"
   ],
   "exclude": ["__mock__", "__mocks__", ".spec.ts", "tests/*"],
   "delete": true,

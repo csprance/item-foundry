@@ -40,4 +40,8 @@ export abstract class BaseItem extends Item {
   @IntProperty()
   @Hint('How many of these can you stack in one slot')
   stackSize: number = 1;
+
+  @FileProperty()
+  @Hint('The icon image for the item')
+  icon: string = '/empty.png';
 }
