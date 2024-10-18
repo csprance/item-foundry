@@ -1,0 +1,11 @@
+{
+  "name": "@qtg/tsconfig",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Typescript Config for item-foundry and it's packages",
+  "license": "SEE  LICENSE IN LICENSE",
+  "author": "Chris Sprance",
+  "files": [
+    "tsconfig.base.json"
+  ]
+}

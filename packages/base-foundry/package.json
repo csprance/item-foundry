@@ -1,0 +1,17 @@
+{
+  "name": "@qtg/base-foundry",
+  "version": "0.0.1",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "module": "./src/index.ts",
+  "scripts": {
+    "dev": "barrelsby --watch --config .barrelsby.json",
+    "prettier": "prettier \"**/*.{ts,js,json,md,yml,yaml,gql,graphql}\" --write",
+    "lint": "eslint \"**/*.ts\""
+  },
+  "dependencies": {
+    "@qtg/item-foundry": "workspace:*",
+    "@qtg/tsconfig": "workspace:*"
+  }
+}
