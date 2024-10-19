@@ -1,5 +1,3 @@
-import { Option } from 'clipanion';
-
 import { FBCommand } from '../FBCommand.ts';
 import { CommandName } from '../lib';
 
@@ -12,7 +10,7 @@ export class GenerateFoundry extends FBCommand {
   });
 
   async execute() {
-    this.log(`Executing Generate with model: ${this.config} `);
+    this.log(`Executing Generate with model `);
     // Step 1 - Collect all of the item schema from base item
   }
 }

@@ -1,20 +1,9 @@
 import chalk from 'chalk';
 import { spawn } from 'child_process';
-import { Command, Option } from 'clipanion';
-
-import type { GeneratConfig } from './cli.ts';
-import { getConfig } from './lib.ts';
+import { Command } from 'clipanion';
 
 export class FBCommand extends Command {
-  protected config: GeneratConfig = {} as GeneratConfig;
-
-  configPath = Option.String('--config', {
-    description: 'If the seeker.json is somewhere else specify it here',
-  });
-
   validateAndExecute(): Promise<number> {
-    // Read the config at the working directory where the cli is run
-    this.config = getConfig();
     return super.validateAndExecute();
   }
 

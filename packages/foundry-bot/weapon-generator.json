@@ -1,0 +1,10 @@
+{
+  "name": "weapons",
+  "prompt": "Generate me futuristic cyberpunk themed weapons",
+  "quantity": 15,
+  "outDir": "D:\\code\\item-foundry\\packages\\base-foundry\\src\\items\\weapons-cyberpunk",
+  "baseItemSchemas": [
+    "D:\\code\\item-foundry\\packages\\base-foundry\\src\\basetypes\\BaseItem.ts",
+    "D:\\code\\item-foundry\\packages\\base-foundry\\src\\basetypes\\Weapon.ts"
+  ]
+}

@@ -13,7 +13,7 @@ export class ExportFoundry extends FBCommand {
       'Exports the foundry to the correct location using the specified serializer',
   });
 
-  exportDir = Option.String('-d,--dir', '../../export', {
+  exportDir = Option.String('-d,--dir', './export', {
     description: 'Where to export to',
   });
   serializer = Option.String('-s,--serializer', 'json', {
@@ -23,6 +23,6 @@ export class ExportFoundry extends FBCommand {
   async execute() {
     this.log(`Executing Export to ${this.exportDir} - as ${this.serializer}`);
     const foundry = new ItemFoundry();
-    foundry.export();
+    foundry.export(this.exportDir, this.serializer);
   }
 }

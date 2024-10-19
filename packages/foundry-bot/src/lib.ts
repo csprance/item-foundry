@@ -1,7 +1,7 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 
-import type { GeneratConfig } from './cli.ts';
+import type { GenerateConfig } from './cli.ts';
 
 export enum CommandName {
   ExportFoundry = 'export',
@@ -26,7 +26,7 @@ export function importToArray<Key extends string, PropType>(
  * Read the seeker.json config file in the root where the
  * CLI is run
  */
-export function getConfig(configPath?: string): GeneratConfig {
+export function getConfig(configPath?: string): GenerateConfig {
   // Read and parse the seeker.json file
   try {
     const configFile = fs.readFileSync(

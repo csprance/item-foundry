@@ -2,13 +2,15 @@ import { Cli } from 'clipanion';
 
 import { name, version } from '../package.json';
 
-export interface GeneratConfig {
+export interface GenerateConfig {
   // Either a filepath or a prompt to use
   prompt: string;
   // The files that defines the base item schemas to provide to the code generator
   baseItemSchemas: string[];
-  // The test template to use to validate an item
-  testTemplate: string;
+  // How many items to generate
+  quantity: number;
+  // Where we want these weapons to end up at
+  outDir: string;
 }
 
 const cli = new Cli({
