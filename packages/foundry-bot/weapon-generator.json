@@ -6,5 +6,11 @@
   "baseItemSchemas": [
     "D:\\code\\item-foundry\\packages\\base-foundry\\src\\basetypes\\BaseItem.ts",
     "D:\\code\\item-foundry\\packages\\base-foundry\\src\\basetypes\\Weapon.ts"
+  ],
+  "exampleItems": [
+    "D:\\code\\item-foundry\\packages\\base-foundry\\src\\items\\Berries.ts",
+    "D:\\code\\item-foundry\\packages\\base-foundry\\src\\items\\CampFire.ts",
+    "D:\\code\\item-foundry\\packages\\base-foundry\\src\\items\\ChoppedWood.ts",
+    "D:\\code\\item-foundry\\packages\\base-foundry\\src\\items\\CookedMeat.ts"
   ]
 }

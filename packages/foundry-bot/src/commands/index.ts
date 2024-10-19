@@ -3,4 +3,4 @@
  */
 
 export * from './ExportFoundry';
-export * from './Generate';
+export * from './generate/index';

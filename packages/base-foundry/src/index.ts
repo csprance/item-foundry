@@ -20,7 +20,7 @@ export class ItemFoundry {
   ) {
     const serializer = serializers[serializationFormat];
     for (const item of [this.items, this.recipes].flat()) {
-      const exportPath = path.join(outDir, `${item.id}.json`);
+      const exportPath = path.join(outDir, `${item.id}.${serializationFormat}`);
       // Serialize the item and write it to disk
       const directoryPath = path.dirname(exportPath);
       fs.mkdirSync(directoryPath, { recursive: true });

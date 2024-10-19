@@ -9,7 +9,10 @@
     "build": "bun --filter \"*\" build",
     "prettier": "prettier \"**/*.{ts,js,json,md,yml,yaml,gql,graphql}\" --write",
     "lint": "eslint \"**/*.ts\"",
-    "export": "bun run ./packages/foundry-bot/src/index.ts export"
+    "generate": "bun run ./packages/foundry-bot/src/index.ts generate --config packages/foundry-bot/weapon-generator.json",
+    "export": "bun run ./packages/foundry-bot/src/index.ts export -s json",
+    "export:xml": "bun run ./packages/foundry-bot/src/index.ts export -s xml",
+    "export:yaml": "bun run ./packages/foundry-bot/src/index.ts export -s yaml"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

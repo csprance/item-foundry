@@ -16,6 +16,7 @@
     "@qtg/base-foundry": "workspace:*",
     "@qtg/tsconfig": "workspace:*",
     "clipanion": "^4.0.0-rc.4",
+    "langchain": "^0.3.2",
     "ollama": "^0.5.9",
     "typanion": "^3.14.0"
   }

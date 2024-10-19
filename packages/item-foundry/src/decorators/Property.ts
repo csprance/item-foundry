@@ -20,7 +20,7 @@ export function Property(options: PropertyOptions = {}) {
   return function (target: any, propertyKey: string) {
     // Handle serialization
     if (options.serialize !== false) {
-      let keys: string[] = Reflect.getMetadata(SERIALIZE_KEYS, target) || [];
+      const keys: string[] = Reflect.getMetadata(SERIALIZE_KEYS, target) || [];
       if (!keys.includes(propertyKey)) {
         keys.push(propertyKey);
         Reflect.defineMetadata(SERIALIZE_KEYS, keys, target);
@@ -29,7 +29,7 @@ export function Property(options: PropertyOptions = {}) {
 
     // Handle validation
     if (options.validate) {
-      let propertyRules: { [key: string]: ValidationRule[] } =
+      const propertyRules: { [key: string]: ValidationRule[] } =
         Reflect.getMetadata(VALIDATION_RULES, target) || {};
       if (!propertyRules[propertyKey]) {
         propertyRules[propertyKey] = [];
@@ -40,7 +40,7 @@ export function Property(options: PropertyOptions = {}) {
 
     // Handle additional metadata
     if (options.metadata) {
-      let metadata: { [key: string]: any } =
+      const metadata: { [key: string]: any } =
         Reflect.getMetadata(PROPERTY_METADATA, target) || {};
       metadata[propertyKey] = options.metadata;
       Reflect.defineMetadata(PROPERTY_METADATA, metadata, target);

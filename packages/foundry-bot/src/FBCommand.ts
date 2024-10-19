@@ -54,7 +54,9 @@ export class FBCommand extends Command {
    * @protected
    */
   protected log(...args: any[]) {
-    const msg = chalk.blue.bold(`[Foundry Bot] ${args}\n`);
+    const msg = chalk.whiteBright(
+      `[Foundry Bot] ${JSON.stringify(args, null, 2)}\n`,
+    );
     this.context.stdout.write(msg);
   }
 
