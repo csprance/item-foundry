@@ -1,4 +1,5 @@
 import { ItemFoundry } from '@qtg/base-foundry';
+import { SerializationFormat } from '@qtg/item-foundry';
 import { Option } from 'clipanion';
 
 import { FBCommand } from '../FBCommand.ts';
@@ -16,7 +17,7 @@ export class ExportFoundry extends FBCommand {
   exportDir = Option.String('-d,--dir', './export', {
     description: 'Where to export to',
   });
-  serializer = Option.String('-s,--serializer', 'json', {
+  serializer: SerializationFormat = Option.String('-s,--serializer', 'json', {
     description: 'What serializer to use',
   });
   includeMetadata = Option.Boolean('-m,--includeMetadata', false, {

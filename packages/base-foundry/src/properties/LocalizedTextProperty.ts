@@ -1,4 +1,4 @@
-import { Property, ValidationRule } from '@qtg/item-foundry';
+import { Property, type ValidationRule } from '@qtg/item-foundry';
 
 export enum LocCat {
   Uncategorized = '/uncategorized/',

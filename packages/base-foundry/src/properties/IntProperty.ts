@@ -1,4 +1,4 @@
-import { Property, ValidationRule, Validators } from '@qtg/item-foundry';
+import { Property, type ValidationRule, Validators } from '@qtg/item-foundry';
 
 export function IntProperty(options: { metadata?: Record<string, any> } = {}) {
   const validationRules: ValidationRule[] = [

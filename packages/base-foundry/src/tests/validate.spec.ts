@@ -5,14 +5,14 @@ const foundry = new ItemFoundry();
 
 test('Validate Recipes', () => {
   for (const recipe of foundry.recipes) {
-    console.log(recipe.name.text);
+    console.log(recipe.id);
     expect(recipe.validate()).toEqual([]);
   }
 });
 
 test('Validate Items', () => {
   for (const item of foundry.items) {
-    console.log(item.name.text);
+    console.log(item.id);
     expect(item.validate()).toEqual([]);
   }
 });

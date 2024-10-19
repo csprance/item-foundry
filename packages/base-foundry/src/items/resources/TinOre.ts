@@ -1,7 +1,7 @@
 import { BaseItem } from '~/basetypes';
 import { LocalizedText } from '~/properties';
 
-export class CopperOre extends BaseItem {
+export class TinOre extends BaseItem {
   name = new LocalizedText({ text: 'Copper Ore' });
   description = new LocalizedText({
     text: 'A clump of copper ore ready to be processed.',

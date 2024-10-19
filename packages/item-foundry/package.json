@@ -5,6 +5,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "type": "module",
   "module": "./src/index.ts",
+  "main": "./src/index.ts",
   "scripts": {
     "dev": "chokidar 'src/**/*' -i 'src/**/index.ts' -c 'bun run barrels'",
     "barrels": "barrelsby --config .barrelsby.json"

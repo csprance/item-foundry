@@ -1,4 +1,4 @@
-import { Item, Property, ValidationRule } from '@qtg/item-foundry';
+import { Item, Property, type ValidationRule } from '@qtg/item-foundry';
 import { toSnakeCase } from '~/utils';
 
 export function RecipeIOProperty(
