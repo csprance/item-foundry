@@ -17,7 +17,7 @@ export abstract class Item {
     return toSnakeCase(className);
   }
 
-  validate(): string[] {
+  public validate(): string[] {
     const errors: string[] = [];
     const rules = getValidationRules(this);
 
@@ -35,7 +35,7 @@ export abstract class Item {
     return errors;
   }
 
-  toJSON(includeMetadata = true): any {
+  public toJSON(includeMetadata = true): any {
     const json: Record<string, any> = { id: this.id };
     const props = getSerializableProperties(this);
     const metadata = getPropertyMetadata(this);

@@ -1,3 +1,4 @@
+import { ItemFoundry } from '@qtg/base-foundry';
 import { Option } from 'clipanion';
 
 import { FBCommand } from '../FBCommand.ts';
@@ -21,5 +22,7 @@ export class ExportFoundry extends FBCommand {
 
   async execute() {
     this.log(`Executing Export to ${this.exportDir} - as ${this.serializer}`);
+    const foundry = new ItemFoundry();
+    foundry.export();
   }
 }

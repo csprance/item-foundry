@@ -8,11 +8,14 @@
   "type": "module",
   "module": "./src/index.ts",
   "scripts": {
-    "barrels": "barrelbot watch src/commands --ext ts",
-    "dev": "bun run barrels",
-    "build": "barrelbot src/commands --ext ts && bun build ./src/index.ts --compile --outfile ../../foundry-bot"
+    "dev": "chokidar 'src/**/*' -i 'src/**/index.ts' -c 'bun run barrels'",
+    "barrels": "barrelsby --config .barrelsby.json",
+    "prettier": "prettier \"**/*.{ts,js,json,md,yml,yaml,gql,graphql}\" --write",
+    "lint": "eslint \"**/*.ts\"",
+    "build": "bun barrels && bun build ./src/index.ts --compile --outfile ../../foundry-bot"
   },
   "devDependencies": {
+    "@qtg/base-foundry": "workspace:*",
     "@qtg/tsconfig": "workspace:*",
     "clipanion": "^4.0.0-rc.4",
     "typanion": "^3.14.0"
