@@ -19,10 +19,13 @@ export class ExportFoundry extends FBCommand {
   serializer = Option.String('-s,--serializer', 'json', {
     description: 'What serializer to use',
   });
+  includeMetadata = Option.Boolean('-m,--includeMetadata', false, {
+    description: 'Should we export the metadata also',
+  });
 
   async execute() {
     this.log(`Executing Export to ${this.exportDir} - as ${this.serializer}`);
     const foundry = new ItemFoundry();
-    foundry.export(this.exportDir, this.serializer);
+    foundry.export(this.exportDir, this.serializer, this.includeMetadata);
   }
 }

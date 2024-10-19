@@ -13,7 +13,11 @@ export class ItemFoundry {
   items = mapItemClasses(Items);
   recipes = mapItemClasses(Recipes);
 
-  public export(outDir: string, serializationFormat: SerializationFormat) {
+  public export(
+    outDir: string,
+    serializationFormat: SerializationFormat,
+    includeMetadata: boolean,
+  ) {
     const serializer = serializers[serializationFormat];
     for (const item of [this.items, this.recipes].flat()) {
       const exportPath = path.join(outDir, `${item.id}.json`);
@@ -22,7 +26,7 @@ export class ItemFoundry {
       fs.mkdirSync(directoryPath, { recursive: true });
       fs.writeFileSync(
         exportPath,
-        serializer.serialize(item, { includeMetadata: false }),
+        serializer.serialize(item, { includeMetadata }),
       );
       console.log(`Exported: ${exportPath}`);
     }
