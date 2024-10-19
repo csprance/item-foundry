@@ -12,10 +12,11 @@
     "barrels": "barrelsby --config .barrelsby.json",
     "build": "bun barrels && bun build ./src/index.ts --compile --outfile ../../foundry-bot"
   },
-  "devDependencies": {
+  "dependencies": {
     "@qtg/base-foundry": "workspace:*",
     "@qtg/tsconfig": "workspace:*",
     "clipanion": "^4.0.0-rc.4",
+    "ollama": "^0.5.9",
     "typanion": "^3.14.0"
   }
 }
