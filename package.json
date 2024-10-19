@@ -4,6 +4,7 @@
   "private": true,
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
+    "test": "bun test",
     "dev": "bun --filter \"*\" dev",
     "build": "bun --filter \"*\" build",
     "prettier": "prettier \"**/*.{ts,js,json,md,yml,yaml,gql,graphql}\" --write",
