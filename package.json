@@ -5,17 +5,23 @@
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "dev": "bun --filter \"*\" dev",
-    "build": "bun --filter \"*\" build"
+    "build": "bun --filter \"*\" build",
+    "prettier": "prettier \"**/*.{ts,js,json,md,yml,yaml,gql,graphql}\" --write",
+    "lint": "eslint \"**/*.ts\""
   },
   "devDependencies": {
+    "@eslint/js": "^9.13.0",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/bun": "latest",
     "@types/node": "^22.7.4",
     "barrelsby": "^2.8.1",
-    "chokidar-cli": "^3.0.0",
     "chokidar": "^4.0.1",
+    "chokidar-cli": "^3.0.0",
     "concurrently": "^9.0.1",
-    "prettier": "latest"
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0",
+    "prettier": "latest",
+    "typescript-eslint": "^8.10.0"
   },
   "workspaces": [
     "packages/**"

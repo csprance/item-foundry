@@ -7,12 +7,12 @@ Item Foundry is a TypeScript-based framework designed to streamline the creation
 - [Features](#features)
 - [Why Item Foundry?](#why-item-foundry)
 - [Getting Started](#getting-started)
-    - [Installation](#installation)
-    - [Project Structure](#project-structure)
+  - [Installation](#installation)
+  - [Project Structure](#project-structure)
 - [Core Concepts](#core-concepts)
-    - [Properties](#properties)
-    - [Base Items](#base-items)
-    - [Items](#items)
+  - [Properties](#properties)
+  - [Base Items](#base-items)
+  - [Items](#items)
 - [Defining Properties](#defining-properties)
 - [Creating Base Items](#creating-base-items)
 - [Defining Items](#defining-items)
@@ -68,14 +68,15 @@ project-root/
 
 - **framework/**: Contains the core Item Foundry code (decorators, base classes, validators).
 - **items/**: Your custom item definitions.
-    - **basetypes/**: Abstract base item types.
-    - **instances/**: Concrete item instances.
-    - **properties/**: Reusable item properties.
+  - **basetypes/**: Abstract base item types.
+  - **instances/**: Concrete item instances.
+  - **properties/**: Reusable item properties.
 - **tests/**: Your test files.
 
 ## Core Concepts
 
 ### Properties
+
 > `@Property()`
 
 Properties are the building blocks of items. They represent any attribute like damage, healing amount, durability, filepaths. Properties are defined by:
@@ -105,8 +106,14 @@ import { Validators } from '../validators';
 
 export function Damage(options: { metadata?: Record<string, any> } = {}) {
   const validationRules: ValidationRule[] = [
-    { validator: Validators.isPositiveNumber, message: 'Damage must be a positive number' },
-    { validator: Validators.isInRange(1, 1000), message: 'Damage must be between 1 and 1000' },
+    {
+      validator: Validators.isPositiveNumber,
+      message: 'Damage must be a positive number',
+    },
+    {
+      validator: Validators.isInRange(1, 1000),
+      message: 'Damage must be between 1 and 1000',
+    },
   ];
   return Property({
     validate: validationRules,

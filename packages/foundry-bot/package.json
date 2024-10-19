@@ -10,8 +10,6 @@
   "scripts": {
     "dev": "chokidar 'src/**/*' -i 'src/**/index.ts' -c 'bun run barrels'",
     "barrels": "barrelsby --config .barrelsby.json",
-    "prettier": "prettier \"**/*.{ts,js,json,md,yml,yaml,gql,graphql}\" --write",
-    "lint": "eslint \"**/*.ts\"",
     "build": "bun barrels && bun build ./src/index.ts --compile --outfile ../../foundry-bot"
   },
   "devDependencies": {

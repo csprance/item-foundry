@@ -7,9 +7,7 @@
   "module": "./src/index.ts",
   "scripts": {
     "dev": "chokidar 'src/**/*' -i 'src/**/index.ts' -c 'bun run barrels'",
-    "barrels": "barrelsby --config .barrelsby.json",
-    "prettier": "prettier \"**/*.{ts,js,json,md,yml,yaml,gql,graphql}\" --write",
-    "lint": "eslint \"**/*.ts\""
+    "barrels": "barrelsby --config .barrelsby.json"
   },
   "dependencies": {
     "@qtg/item-foundry": "workspace:*",
