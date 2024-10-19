@@ -4,6 +4,7 @@
 
 export * from './Item';
 export * from './lib';
+export * from './serializers';
 export * from './validators';
 export * from './decorators/Hint';
 export * from './decorators/Property';

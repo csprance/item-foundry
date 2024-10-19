@@ -1,9 +1,5 @@
-import {
-  getPropertyMetadata,
-  getSerializableProperties,
-  getValidationRules,
-} from './decorators/Property';
-import { serializeValue, toSnakeCase } from './lib';
+import { getValidationRules } from './decorators/Property';
+import { toSnakeCase } from './lib';
 
 export abstract class Item {
   id: string = '';
@@ -33,31 +29,5 @@ export abstract class Item {
     }
 
     return errors;
-  }
-
-  public toJSON(includeMetadata = true): any {
-    const json: Record<string, any> = { id: this.id };
-    const props = getSerializableProperties(this);
-    const metadata = getPropertyMetadata(this);
-
-    for (const prop of props) {
-      const value = (this as any)[prop];
-      json[prop] = serializeValue(value);
-
-      if (includeMetadata && metadata[prop]) {
-        json[`__${prop}`] = metadata[prop];
-      }
-    }
-    if (includeMetadata) {
-      json['__type'] = Object.getPrototypeOf(
-        Object.getPrototypeOf(this),
-      ).constructor.name;
-    }
-
-    return JSON.parse(
-      JSON.stringify({
-        ...json,
-      }),
-    );
   }
 }
