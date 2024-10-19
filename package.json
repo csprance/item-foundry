@@ -8,7 +8,8 @@
     "dev": "bun --filter \"*\" dev",
     "build": "bun --filter \"*\" build",
     "prettier": "prettier \"**/*.{ts,js,json,md,yml,yaml,gql,graphql}\" --write",
-    "lint": "eslint \"**/*.ts\""
+    "lint": "eslint \"**/*.ts\"",
+    "export": "bun run ./packages/foundry-bot/src/index.ts export"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
